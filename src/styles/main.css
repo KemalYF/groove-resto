@@ -1,0 +1,698 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-size: 12px;
+    font-family: sans-serif;
+    background: linear-gradient(to left, rgb(148, 106, 43), rgb(78, 45, 4));
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: linear-gradient(to top, rgb(148, 106, 43), rgb(78, 45, 4));
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(78, 45, 4);
+    border-radius: 20px;
+    border: 3px solid rgb(253, 246, 236);
+}
+
+/* Skip Content */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: linear-gradient(to left, rgb(148, 106, 43), rgb(78, 45, 4));
+    color: white;
+    padding: 8px;
+    z-index: 10;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Header */
+
+.main-header {
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to left, rgb(28, 10, 0), rgb(54, 21, 0));
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+}
+
+.header__title {
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(247, 110, 17);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container {
+    max-width: 100%;
+    height: 6em;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav {
+    text-align: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__list > .nav__item {
+    display: inline;
+}
+
+.nav__list a {
+    display: inline-block;
+    padding: 1.5em 1.5em;
+    text-align: center;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(247, 110, 17);
+    transition: 0.3s opacity;
+}
+
+.nav__list a:hover {
+    text-decoration: underline;
+    color: rgb(255, 251, 15);
+    opacity: 0.7;
+}
+
+.nav__item {
+    font-size: 17px;
+}
+
+/* Menu */
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 3.5em;
+    width: 3.5em;
+    padding: 0.6em;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    background: rgb(28, 10, 0);
+    border: 0;
+    cursor: pointer;
+    z-index: 30;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 3.5em;
+    height: 3.5em;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.menu-toggle .check {
+    display: block;
+    width: 2em;
+    height: 0.2em;
+    background-color: #EFEFEF;
+    border-radius: 0.05em;
+} 
+
+/* heros */
+.hero {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), url("./images/hero-image_4-large.jpg");
+    background-color: rgb(247, 110, 17);
+}
+
+.hero__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__title {
+    color: rgb(253, 246, 236);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.8em;
+    text-align: center;
+    justify-content: center;
+    padding: 6em 0 1em 0;
+}
+
+.hero__about {
+    border: 1px solid rgb(54, 21, 0);
+    background-color: rgb(54, 21, 0);
+    margin: 0;
+    border-radius: 0.7em;
+    cursor: pointer;
+}
+
+.hero__about a {
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(253, 246, 236);
+    padding: 1.5em 1.5em;
+    text-align: center;
+    text-decoration: none;
+}
+.hero__about:hover {
+    background-color: rgb(180, 81, 15);
+    animation: pulse 1s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 
+        0 0 25px rgb(180, 81, 15),
+        0 0 50px rgb(247, 110, 17);
+    }
+}
+
+/* about resto */
+.about__content {
+    display: grid;
+    grid-template-columns: 40% 50%;
+    padding: 3em;
+    background-color: rgb(253, 246, 236);
+}
+
+.img__about {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    overflow-x: hidden;
+    position: relative;
+    width: 80%;
+    margin-top: 1.8em;
+}
+
+.about__title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2.7em;
+    color: rgb(54, 21, 0);
+    margin: 0.5em 0 0.5em 0;
+    margin-top: 2em;
+}
+
+.about__description {
+    font-size: 1.2em;
+    line-height: 1.9em;
+    margin-bottom: 3em;
+}
+
+/* latest */
+
+.latest {
+    width: 100%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.latest__label {
+    margin-bottom: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 32px;
+    font-weight: lighter;
+    color: rgb(253, 246, 236);
+}
+
+/*post */
+
+.restaurants {
+    margin: 32px auto auto;
+    text-align: left;
+}
+
+/* post item */
+
+.post-item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 88%;
+    border-radius: 5px;
+    margin-left: 20px;
+    background: rgb(253, 246, 236);
+    box-shadow: 5px 3px 10px 5px rgba(0,0,0,0.6);
+    transition: 0.3s;
+}
+
+.post-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+.post-item__content {
+    padding: 10px;
+}
+
+.post-item__thumbnail {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    border-bottom: 3px solid rgb(54, 21, 0);
+    height: 37vh;
+    background-position: center;
+    object-fit: cover;
+}
+
+.post-item__rating {
+    width: 40%;
+    background: linear-gradient(to bottom, rgb(28, 10, 0), rgb(54, 21, 0));
+    color: rgb(253, 246, 236);
+    font-size: 0.8em;
+    margin: 0 0 8px;
+    padding: 9px 9px; 
+    align-self: flex-end;
+    text-align: center;
+}
+
+.post-item__city {
+    position: absolute;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    padding: 0.8em 3.5em;
+    margin: 2em 0 0 0;
+    background: linear-gradient(to bottom, rgb(28, 10, 0), rgb(54, 21, 0));
+    z-index: 2;
+}
+
+.post-item__city__author {
+    color: rgb(253, 246, 236);
+}
+
+.post-item__title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(54, 21, 0);
+    padding: 0 7px;
+}
+
+.post-item__title a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 40px;
+    font-weight: 700;
+    transition: 0.3s opacity;
+}
+
+.post-item__title a:hover {
+    color: rgb(141, 72, 29);
+    opacity: 0.5;
+}
+
+.post-item__description {
+    margin-top: 16px;
+    text-align: justify;
+    font-size: 14px;
+    line-height: 25px;
+    padding: 0 7px;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 7;
+}
+
+.post-item__description::-webkit-scrollbar {
+    width: 10px;
+}
+  
+.post-item__description::-webkit-scrollbar-thumb {
+    background-color: rgb(78, 45, 4);
+    border-radius: 20px;
+    border: 3px solid rgb(253, 246, 236);
+}
+
+/* Detail List Restaurant */
+
+.restaurant-detail {
+    background: rgb(253, 246, 236);
+    box-shadow: 12px 7px 21px 3px rgba(0,0,0,0.84);
+    -webkit-box-shadow: 12px 7px 21px 3px rgba(0,0,0,0.84);
+    -moz-box-shadow: 12px 7px 21px 3px rgba(0,0,0,0.84);
+    text-align: left;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.grid-detail {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 6em 6em 1em 6em;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 50vh;
+    background-position: center;
+    object-fit: cover;
+    width: 100%;
+    margin: 1em;
+}
+
+.detail-info {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(54, 21, 0);
+    margin: 2em 4em;
+}
+
+.detail-info p {
+    font-size: 1.2em;
+}
+
+.detail-info h4 {
+    font-size: 1.2em;
+}
+
+.detail-nama {
+    font-size: 3em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(54, 21, 0);
+}
+
+.grid-city-rating {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+}
+
+.city-detail {
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    background-color: #DDD;
+    width: fit-content;
+    border-radius: 1em;
+}
+
+.rating-detail {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    padding: 0.5em 1em;
+    margin: 1em;
+    background-color: #DDD;
+    border-radius: 1em;
+}
+
+.p-rating-detail {
+    margin: 0 .5em;
+    font-weight: 600;
+    color: rgb(54, 21, 0);
+    font-size: 12px;
+}
+
+.flex-category {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 1em 0;
+}
+
+.flex-category h4 {
+    font-size: 1.2em;
+}
+
+.categorie-restaurant {
+    background-color: rgb(54, 21, 0);
+    color: rgb(253, 246, 236);
+    padding: 0.5em 1.25em;
+    margin: 0 .25em;
+    border-radius: 1.5em;
+}
+
+.span-category {
+    margin: .25em .5em;
+    font-size: 12px;
+}
+
+.p-padding {
+    padding: .5em 0;
+    margin-bottom: 1em;
+}
+
+.description-detail {
+    padding: 0 7em;
+}
+
+.p-description {
+    text-align: justify;
+    padding: .5em 0;
+    font-size: 1.4em;
+    line-height: 1.9em;
+}
+
+.review-title {
+    font-size: 1.7em;
+    padding-top: 2em;
+}
+
+.name-review {
+    font-size: 1.3em;
+}
+
+.p-review {
+    font-size: 1em;
+}
+
+/* no-favorite restaurants */
+.no-favorite {
+    text-align: center;
+    align-items: center;
+    font-weight: lighter;
+    color: rgb(199, 186, 168);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 1.5em;
+}
+
+
+/* Form Review */
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 2em 2em 0;
+    padding: 1.5em;
+    border: 2px;
+    border-radius: 0.5em;
+    background: linear-gradient(to bottom right, rgb(148, 106, 43), rgb(78, 45, 4));
+    box-shadow: 11px 7px 21px 3px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 11px 7px 21px 3px rgba(0,0,0,0.76);
+    -moz-box-shadow: 11px 7px 21px 3px rgba(0,0,0,0.76);
+}
+
+.form-input {
+    display: block;
+    width: 100%;
+    min-height: 1em;
+    padding: 1em;
+    margin: .5em 0;
+    color: #212121;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 2px solid #7D7D7D;
+    appearance: none;
+    border-radius: 0.5em;
+}
+
+input[type=text]:hover{
+    border:2px solid rgb(117, 54, 9);
+    box-shadow: 0 0 5px rgb(117, 54, 9), inset 0 0 5px rgb(117, 54, 9), 0 2px 0 rgb(0, 0, 0);
+}
+
+.input-review {
+    padding-bottom: 5em;
+}
+
+.form-label {
+    padding-bottom: 8px;
+    font-weight: 800;
+    font-size: 1.2em;
+    color: rgb(253, 246, 236);
+}
+
+.form-margin {
+    margin-bottom: 1.3em;
+    margin-top: 0.5em;
+}
+
+.submit {
+    align-self: flex-end;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    color: #F0F0F0;
+    margin: 0;
+    padding: 1.5em 3em;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid rgb(54, 21, 0);
+    background-color: rgb(54, 21, 0);
+    border-radius: 0.7em;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background-color: rgb(180, 81, 15);
+    animation: pulse 1s ease-in-out;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 
+        0 0 25px rgb(180, 81, 15),
+        0 0 50px rgb(247, 110, 17);
+    }
+}
+
+.submit-review {
+    margin-top: 2em;
+}
+
+
+/* Reviews */
+
+.reviewer-label {
+    padding-top: 2em;
+    font-weight: 600;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.8em;
+    font-weight: lighter;
+    color: rgb(54, 21, 0);
+}
+
+.restaurant-reviews {
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding: 2em 2em 3em 0;
+}
+
+.grid-review {
+    width: 100%;
+    margin-bottom: 1.5em;
+    background: rgb(245, 239, 231);
+    border: 3px solid rgb(54, 21, 0);
+    border-radius: .5em;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+}
+
+.grid-review::-webkit-scrollbar {
+    width: 10px;
+}
+  
+.grid-review::-webkit-scrollbar-thumb {
+    background-color: rgb(78, 45, 4);
+    border-radius: 20px;
+    border: 3px solid rgb(253, 246, 236);
+}
+
+.review-description {
+    padding: 1em;
+    font-size: 1.5em;
+    color: rgb(109, 62, 5);
+}
+
+
+/* Like */
+
+.like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    border: 1px solid rgb(54, 21, 0);
+    background: linear-gradient(to left, rgb(28, 10, 0), rgb(54, 21, 0));
+    color: rgb(247, 110, 17);
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.like:hover {
+    background-color: rgb(54, 21, 0);
+    animation: liked 1s ease-in-out;
+    transform: scale(1.03);
+}
+
+@keyframes liked {
+    0% {
+        box-shadow: 
+        0 0 25px rgb(54, 21, 0),
+        0 0 50px rgb(247, 110, 17);
+    }
+}
+
+/* footer */
+
+.main-footer {
+    background: linear-gradient(to left, rgb(28, 10, 0), rgb(54, 21, 0));
+    padding: 2em;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.p-footer {
+    display: inline-block;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(247, 110, 17);
+    font-size: 18px;
+}
